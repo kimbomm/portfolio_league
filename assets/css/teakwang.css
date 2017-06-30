@@ -79,7 +79,6 @@ body {
 }
 .header_wrap .menu_wrap {
   height: 80px;
-  overflow: hidden;
 }
 .header_wrap .menu_wrap .bars {
   width: 220px;

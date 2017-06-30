@@ -7,12 +7,10 @@ $(function() {
     body_Width = $('body,html').width()+scrWidth;
     li_W = $('.top_menu>li').width();
     barLeft = $('.top_menu li:first-child').offset().left - li_W;
-    console.log(body_Width);
   })
   $(window).trigger('resize');
   //메인메뉴
   if(body_Width > 1080){
-    console.log(body_Width);
     $('.bars').css({
       'left': 'barLeft',
       'display': 'block'
