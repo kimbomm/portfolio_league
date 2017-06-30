@@ -91,6 +91,13 @@ $(function() {
     }
   })
 
+  if(body_Width <= 1080){
+    $('.top_menu>li').mouseenter(function(){
+      $(this).find('.sub_menu').slideDown();
+    }).mouseleave(function(){
+      $(this).find('.sub_menu').slideUp();
+    })
+  }
 
 
 })
