@@ -7,15 +7,16 @@ $(function() {
     body_Width = $('body,html').width()+scrWidth;
     li_W = $('.top_menu>li').width();
     barLeft = $('.top_menu li:first-child').offset().left - li_W;
+    console.log(body_Width);
   })
   $(window).trigger('resize');
   //메인메뉴
-  if(body_Width > 1080){
-    $('.bars').css({
-      'left': 'barLeft',
-      'display': 'block'
-    });
-    $('.top_menu > li').mouseenter(function() {
+  $('.bars').css({
+    'left': 'barLeft',
+    'display': 'block'
+  });
+  $('.top_menu > li').mouseenter(function() {
+    if(body_Width > 1080){
       $('.bars').stop().css('display', 'block').animate({
         'left': barLeft + (li_W * ($(this).index() + 1))
       })
@@ -23,7 +24,9 @@ $(function() {
       $('header').stop().animate({
         'height': 250
       })
-    }).mouseleave(function() {
+    }
+  }).mouseleave(function() {
+    if(body_Width>1080){
       $('.bars').stop().animate({
         'left': barLeft
       }, function() {
@@ -33,8 +36,9 @@ $(function() {
       $('header').stop().animate({
         'height': 80
       })
-    })
-  }
+    }
+  })
+
 
 
   $('.com_sec li').mouseenter(function() {
