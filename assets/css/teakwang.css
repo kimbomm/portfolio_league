@@ -78,7 +78,7 @@ body {
   vertical-align: middle;
 }
 .header_wrap .menu_wrap {
-  min-height: 80px;
+  height: 80px;
   overflow: hidden;
 }
 .header_wrap .menu_wrap .bars {
@@ -710,6 +710,12 @@ footer .lnb_add .address p {
     white-space: nowrap;
     margin: 0;
   }
+  .vid_sec {
+    height: auto;
+  }
+  .vid_sec video {
+    width: 100%;
+  }
   .map_sec {
     height: 650px;
     overflow: hidden;
@@ -814,6 +820,9 @@ footer .lnb_add .address p {
   .header_wrap header {
     min-height: 70px;
   }
+  .header_wrap .menu_wrap {
+    height: 75px;
+  }
   .header_wrap .gnb {
     height: 75px;
   }
@@ -822,7 +831,7 @@ footer .lnb_add .address p {
     margin-top: 15px;
   }
   .vid_sec {
-    height: 282px;
+    height: auto;
   }
   .vid_sec img {
     width: 200px;
@@ -934,10 +943,22 @@ footer .lnb_add .address p {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .slogan_sec .add-txt img {
+    width: 120px;
+    top: 30px;
+  }
+}
 @media screen and (max-width: 480px) {
   .soc_sec .soc_wrap span.social-01,
   .soc_sec .soc_wrap span.social-03 {
     line-height: 12px;
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) and screen and (max-width: 600px) {
+  .slogan_sec .add-txt img {
+    width: 108px;
+    top: 25px;
   }
 }
