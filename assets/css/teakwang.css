@@ -652,10 +652,7 @@ footer .lnb_add .address p {
     margin-left: -164.5px;
   }
 }
-@media screen and (max-width: 1024px) {
-  body {
-    width: 100%;
-  }
+@media screen and (max-width: 1080px) {
   .header_wrap {
     position: static;
   }
@@ -698,6 +695,7 @@ footer .lnb_add .address p {
     border-top: 1px solid #d3d3d3;
   }
   .header_wrap .top_menu > li .sub_menu li a {
+    height: auto;
     color: #222;
   }
   .header_wrap .top_menu > li > a {
@@ -714,6 +712,11 @@ footer .lnb_add .address p {
     height: auto;
   }
   .vid_sec video {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
     width: 100%;
   }
   .map_sec {
@@ -955,8 +958,6 @@ footer .lnb_add .address p {
     line-height: 12px;
     font-size: 12px;
   }
-}
-@media screen and (max-width: 480px) and screen and (max-width: 600px) {
   .slogan_sec .add-txt img {
     width: 108px;
     top: 25px;
