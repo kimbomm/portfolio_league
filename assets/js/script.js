@@ -15,6 +15,7 @@ $(function() {
     'left': 'barLeft',
     'display': 'block'
   });
+
   $('.top_menu > li').mouseenter(function() {
     if(body_Width > 1080){
       $('.bars').stop().css('display', 'block').animate({
@@ -24,6 +25,8 @@ $(function() {
       $('header').stop().animate({
         'height': 250
       })
+    }else if(body_Width <= 1080){
+      $(this).find('div').slideDown();
     }
   }).mouseleave(function() {
     if(body_Width>1080){
@@ -36,6 +39,8 @@ $(function() {
       $('header').stop().animate({
         'height': 80
       })
+    }else if(body_Width <= 1080){
+      $(this).find('div').slideUp();
     }
   })
 
@@ -93,13 +98,15 @@ $(function() {
     }
   })
 
-  if(body_Width <= 1080){
-    $('.top_menu>li').mouseenter(function(){
-      $(this).find('.sub_menu').slideDown();
-    }).mouseleave(function(){
-      $(this).find('.sub_menu').slideUp();
-    })
-  }
+  $(window).resize(function(){
+    if(body_Width > 1080 && body_move){
+      $('body').animate({
+        'left': 0
+      })
+    }
+  })
+
+
 
 
 })
